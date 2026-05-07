@@ -1,7 +1,10 @@
 package itch.proyecto.dto;
 
-import jakarta.validation.constraints.NotNull;
-import lombok.*;
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -9,6 +12,6 @@ import lombok.*;
 @Builder
 public class ActualizarEstadoNotificacionDto {
 
-    @NotNull(message = "El estadoId es obligatorio")
+	@NotBlank(message = "El estadoId es obligatorio")
     private Long estadoId;
 }

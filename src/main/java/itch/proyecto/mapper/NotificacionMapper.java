@@ -14,7 +14,7 @@ public class NotificacionMapper {
                 .usuarioId(notificacion.getUsuarioId())
                 .incidenciaId(notificacion.getIncidenciaId())
                 .mensaje(notificacion.getMensaje())
-                .fecha(notificacion.getFecha())
+                .fecha(notificacion.getFecha().toString())
                 .estadoId(notificacion.getEstado().getId())
                 .estadoNombre(notificacion.getEstado().getNombre())
                 .build();

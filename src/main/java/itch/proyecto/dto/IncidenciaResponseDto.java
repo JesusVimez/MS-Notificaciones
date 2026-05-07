@@ -9,13 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class NotificacionResponseDto {
+public class IncidenciaResponseDto {
 
     private Long id;
+    private String titulo;
     private Long usuarioId;
-    private Long incidenciaId;
-    private String mensaje;
-    private Long estadoId;
-    private String estadoNombre;
-    private String fecha;
+    private String estado;  // 'REPORTADO', 'EN PROCESO', 'CERRADO'
 }

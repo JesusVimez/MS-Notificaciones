@@ -1,8 +1,10 @@
 package itch.proyecto.dto;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -10,14 +12,11 @@ import lombok.*;
 @Builder
 public class NotificacionRequestDto {
 
-    @NotNull(message = "El usuarioId es obligatorio")
-    private Long usuarioId;
-
+    @NotNull(message = "La incidenciaId es obligatoria")
     private Long incidenciaId;
-
-    @NotBlank(message = "El mensaje es obligatorio")
-    private String mensaje;
 
     @NotNull(message = "El estadoId es obligatorio")
     private Long estadoId;
+
+    private String mensaje;  // El mensaje puede ser opcional
 }
